@@ -75,9 +75,14 @@
 </head>
 <body>
   <div class="box-container">
+<<<<<<< HEAD
     <a href="/userview" class="box box-user">User</a>
     <a href="/admin" class="box box-admin">Admin</a>
   
+=======
+    <a href="register" class="box box-user">User</a>
+    <a href="admin" class="box box-admin">Admin</a>
+>>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
   </div>
 </body>
 </html>

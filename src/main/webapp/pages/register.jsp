@@ -10,6 +10,11 @@
         body {
             background: linear-gradient(120deg, #89f7fe, #66a6ff);
             font-family: 'Segoe UI', sans-serif;
+<<<<<<< HEAD
+=======
+            margin: 0;
+            padding: 0;
+>>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
         }
 
         .form-container {
@@ -19,7 +24,11 @@
             background-color: white;
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+<<<<<<< HEAD
             animation: fadeIn 0.8s ease-in-out;
+=======
+            animation: fadeIn 1s ease-in-out;
+>>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
         }
 
         .form-container h2 {
@@ -37,9 +46,15 @@
         .btn-primary {
             width: 100%;
             border-radius: 8px;
+<<<<<<< HEAD
             font-weight: 600;
             background-color: #007bff;
             letter-spacing: 0.5px;
+=======
+            background: #007bff;
+            font-weight: bold;
+            letter-spacing: 1px;
+>>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
         }
 
         .btn-primary:hover {
@@ -51,8 +66,13 @@
         }
 
         @keyframes fadeIn {
+<<<<<<< HEAD
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+=======
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+>>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
         }
     </style>
 </head>
@@ -61,6 +81,7 @@
 <div class="form-container">
     <h2>User Registration</h2>
 
+<<<<<<< HEAD
     <!-- Registration Form -->
     <form:form method="post" modelAttribute="user" action="/register">
         <form:hidden path="id" />
@@ -102,6 +123,37 @@
         <div class="alert ${messageType == 'warning' ? 'alert-warning' : 'alert-success'} text-center">
             ${message}
         </div>
+=======
+    <!-- Spring form binding to model attribute "user" -->
+    <form:form method="post" modelAttribute="user" action="/register">
+        <form:hidden path="id" />
+
+        <div class="mb-3">
+            <form:input path="name" cssClass="form-control" placeholder="Name" required="true"/>
+        </div>
+
+        <div class="mb-3">
+            <form:input path="email" type="email" cssClass="form-control" placeholder="Email" required="true"/>
+        </div>
+
+        <div class="mb-3">
+            <form:input path="phone" cssClass="form-control" placeholder="Phone" required="true"/>
+        </div>
+
+        <div class="mb-3">
+            <form:input path="department" cssClass="form-control" placeholder="Department" required="true"/>
+        </div>
+
+        <div class="mb-3">
+            <form:input path="college" cssClass="form-control" placeholder="College" required="true"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form:form>
+
+    <c:if test="${not empty message}">
+        <div class="alert alert-danger text-center">${message}</div>
+>>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
     </c:if>
 </div>
 
