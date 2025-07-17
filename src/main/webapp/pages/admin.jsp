@@ -6,137 +6,86 @@
   <meta charset="UTF-8">
   <title>Admin | Event Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
-
-=======
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     body {
-      background: #e0f7fa;
+      background: linear-gradient(135deg, #8e2de2, #4a00e0, #00c9ff, #92fe9d);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .container-main {
       max-width: 1200px;
       margin: 40px auto;
       padding: 0 20px;
+      color: #fff;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
     h2 {
       text-align: center;
       margin-bottom: 30px;
       font-size: 2rem;
       animation: fadeInDown 1s ease;
+      color: #ffeb3b;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.3);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
-    @keyframes fadeInDown {
-      0% { transform: translateY(-20px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-<<<<<<< HEAD
-=======
-
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
     .event-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 20px;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
     .event-card {
-      border-radius: 12px;
+      border-radius: 15px;
       padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeInUp 0.6s ease;
-      background: var(--card-bg, #ffffff);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 0.5s ease;
     }
-<<<<<<< HEAD
-    .event-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    }
-=======
 
     .event-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      animation: glow 1.5s ease-in-out infinite alternate;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
     }
 
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-<<<<<<< HEAD
-=======
-
-    @keyframes glow {
-      0% { box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-      100% { box-shadow: 0 0 25px rgba(0,0,0,0.2); }
-    }
-
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
     .event-card h5 {
       margin-bottom: 12px;
-      font-weight: 600;
+      font-weight: bold;
+      font-size: 1.2rem;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
     .event-card p {
       margin: 6px 0;
       font-size: 0.95rem;
-      color: #333;
     }
-<<<<<<< HEAD
-    .btn-row {
-      margin-top: 15px;
-    }
-=======
 
     .btn-row {
       margin-top: 15px;
     }
 
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
     .btn {
       padding: 6px 15px;
       font-size: 0.85rem;
       border-radius: 6px;
       margin-right: 10px;
     }
-<<<<<<< HEAD
-    .btn-delete { background-color: #dc3545; color: white; border: none; }
-    .btn-update { background-color: #198754; color: white; border: none; }
-    .btn-view { background-color: #0d6efd; color: white; border: none; }
-=======
 
     .btn-delete { background-color: #dc3545; color: white; border: none; }
     .btn-update { background-color: #198754; color: white; border: none; }
+    .btn-view   { background-color: #0d6efd; color: white; border: none; }
 
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
     .add-event-card {
       display: flex;
       align-items: center;
@@ -146,21 +95,11 @@
       border: 2px dashed #0d6efd;
       cursor: pointer;
       transition: background 0.3s ease;
+      background-color: rgba(255,255,255,0.6);
     }
-<<<<<<< HEAD
-    .add-event-card:hover {
-      background-color: rgba(13, 110, 253, 0.1);
-    }
-    .input-group {
-      margin-bottom: 10px;
-    }
-    .form-control {
-      font-size: 0.85rem;
-    }
-=======
 
     .add-event-card:hover {
-      background-color: rgba(13, 110, 253, 0.1);
+      background-color: rgba(13,110,253,0.15);
     }
 
     .input-group {
@@ -168,71 +107,58 @@
     }
 
     .form-control {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
     }
 
-    /* Color Variants */
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
-    .bg1 { --card-bg: #fce4ec; }
-    .bg2 { --card-bg: #e3f2fd; }
-    .bg3 { --card-bg: #e8f5e9; }
-    .bg4 { --card-bg: #fff8e1; }
-    .bg5 { --card-bg: #f3e5f5; }
-    .bg6 { --card-bg: #f9fbe7; }
+    #addEventForm {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @keyframes fadeInDown {
+      0% { transform: translateY(-20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
-<<<<<<< HEAD
-<div class="container-main">
-  <h2>Admin Event Manager</h2>
-=======
-
 <div class="container-main">
   <h2>Admin Event Manager</h2>
 
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
   <div class="event-grid" id="eventGrid">
     <c:forEach var="event" items="${eventList}">
-      <div class="event-card ${event.bgClass}" data-id="${event.id}">
+      <div class="event-card">
         <h5>${event.title}</h5>
         <p><strong>Date:</strong> ${event.date}</p>
         <p><strong>Time:</strong> ${event.time}</p>
         <p><strong>Place:</strong> ${event.place}</p>
+
         <div class="btn-row">
           <form action="/admin/delete" method="post" style="display:inline;">
             <input type="hidden" name="id" value="${event.id}" />
             <button type="submit" class="btn btn-delete">Delete</button>
           </form>
+
           <button class="btn btn-update" onclick="startEdit(this)">Update</button>
-<<<<<<< HEAD
-          <a href="/admin/registered?eventId=${event.id}" class="btn btn-view">View</a>
-=======
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
+          <button class="btn btn-view" onclick="viewRegistered(${event.id})">View</button>
         </div>
       </div>
     </c:forEach>
 
-<<<<<<< HEAD
-    <!-- Add New Event Button -->
-=======
-    <!-- Plus Button -->
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
+    <!-- Add Event Card -->
     <div class="event-card add-event-card" id="plusCard">
       <i class="fas fa-plus"></i>
     </div>
 
-<<<<<<< HEAD
-    <!-- Add/Edit Event Form -->
+    <!-- Hidden Event Form -->
     <div class="event-card" id="addEventForm" style="display: none;">
       <form id="eventForm" action="/admin/add" method="post">
         <input type="hidden" name="id" id="eventId" />
-=======
-    <!-- Add/Edit Form -->
-    <div class="event-card" id="addEventForm" style="display: none;">
-      <form id="eventForm" action="/admin/add" method="post">
-        <input type="hidden" name="id" id="eventId" />
-
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
         <div class="input-group">
           <input type="text" class="form-control" id="eventTitle" name="title" placeholder="Event Title" required>
         </div>
@@ -279,22 +205,7 @@
 
   function startEdit(button) {
     const card = button.closest('.event-card');
-    const id = card.getAttribute('data-id');
-<<<<<<< HEAD
-    const title = card.querySelector('h5')?.innerText || '';
-    const dateText = card.querySelector('p:nth-of-type(1)')?.innerText.split(':')[1]?.trim() || '';
-    const timeText = card.querySelector('p:nth-of-type(2)')?.innerText.split(':')[1]?.trim() || '';
-    const placeText = card.querySelector('p:nth-of-type(3)')?.innerText.split(':')[1]?.trim() || '';
-
-    document.getElementById('eventId').value = id;
-    document.getElementById('eventTitle').value = title;
-    document.getElementById('eventDate').value = dateText;
-    document.getElementById('eventTime').value = timeText;
-    document.getElementById('eventPlace').value = placeText;
-
-    eventForm.action = '/admin/update';
-    submitBtn.innerText = 'Update';
-=======
+    const id = card.querySelector('input[name="id"]')?.value || card.dataset.id;
     const title = card.querySelector('h5').innerText;
     const date = card.querySelector('p:nth-of-type(1)').innerText.split(': ')[1];
     const time = card.querySelector('p:nth-of-type(2)').innerText.split(': ')[1];
@@ -308,15 +219,13 @@
 
     eventForm.action = '/admin/update';
     submitBtn.innerText = 'Update';
-
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
     addForm.style.display = 'flex';
     plusCard.style.display = 'none';
   }
-</script>
-<<<<<<< HEAD
-=======
 
->>>>>>> 95fba36c798bdc48cef0d2b4941b5114f6134d2d
+  function viewRegistered(eventId) {
+    window.location.href = '/admin/registered?eventId=' + eventId;
+  }
+</script>
 </body>
 </html>
